@@ -11,30 +11,29 @@ void fazArray(int array[]) {
           printf("Não quer ordenar nada.\nAcabou");
      } else {
           printf("Coloque %d números para ordenar\n(O programa para quando introduzir 0(Zero))\n", qtd);
-               //verificar se o numero colocado é primo ou nao
+               // Verificar se o numero colocado é primo ou nao
                for (c = 0; c < qtd; c++) {
                int cnt = 0;
                     scanf("%d", &num);
-                    //printf("%d", num);
                     if (num <= 1) {
                          printf("%d is NOT prime\n", num);
                     }
                     else {
-               // Check for divisors from 1 to n
+                    // Verificar os divisores de 1 a Num
                     for (int i = 1; i <= num; i++) {
 
-                    // Check how many number is divisible by n
+                    // Verificar quantos numeros são divisiveis por Num
                          if (num % i == 0){
                          cnt++;
                          }
                     }
                }
 
-                    // If n is divisible by more than 2 numbers then it is not prime
+                    // Se for divisível por mais de 2 numero, então NÃO é primo
                     if (cnt > 2) {
                          printf("%d is NOT prime\n", num);
                     }
-                    // else it is prime
+                    // se não, é primo
                     else {
                     printf("%d is prime\n", num);
                }
